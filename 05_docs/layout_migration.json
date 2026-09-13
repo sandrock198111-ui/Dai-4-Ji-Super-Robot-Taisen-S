@@ -1,0 +1,97 @@
+﻿{
+    "date":  "2026-09-13",
+    "root":  "E:\\4robot",
+    "moves":  [
+                  {
+                      "source":  "E:\\4robot\\Dai-4-Ji-Super-Robot-Taisen-S\\AGENTS.md",
+                      "destination":  "E:\\4robot\\Dai-4-Ji-Super-Robot-Taisen-S\\99_backup\\layout_20260913\\nested_AGENTS.md"
+                  },
+                  {
+                      "source":  "E:\\4robot\\Dai-4-Ji-Super-Robot-Taisen-S\\.git",
+                      "destination":  "E:\\4robot\\.git"
+                  },
+                  {
+                      "source":  "E:\\4robot\\Dai-4-Ji-Super-Robot-Taisen-S\\00_original",
+                      "destination":  "E:\\4robot\\00_original"
+                  },
+                  {
+                      "source":  "E:\\4robot\\Dai-4-Ji-Super-Robot-Taisen-S\\01_work",
+                      "destination":  "E:\\4robot\\01_work"
+                  },
+                  {
+                      "source":  "E:\\4robot\\Dai-4-Ji-Super-Robot-Taisen-S\\02_scripts",
+                      "destination":  "E:\\4robot\\02_scripts"
+                  },
+                  {
+                      "source":  "E:\\4robot\\Dai-4-Ji-Super-Robot-Taisen-S\\03_output",
+                      "destination":  "E:\\4robot\\03_output"
+                  },
+                  {
+                      "source":  "E:\\4robot\\Dai-4-Ji-Super-Robot-Taisen-S\\04_screenshots",
+                      "destination":  "E:\\4robot\\04_screenshots"
+                  },
+                  {
+                      "source":  "E:\\4robot\\Dai-4-Ji-Super-Robot-Taisen-S\\05_docs",
+                      "destination":  "E:\\4robot\\05_docs"
+                  },
+                  {
+                      "source":  "E:\\4robot\\Dai-4-Ji-Super-Robot-Taisen-S\\06_tools",
+                      "destination":  "E:\\4robot\\06_tools"
+                  },
+                  {
+                      "source":  "E:\\4robot\\Dai-4-Ji-Super-Robot-Taisen-S\\99_backup",
+                      "destination":  "E:\\4robot\\99_backup"
+                  },
+                  {
+                      "source":  "E:\\4robot\\Dai-4-Ji-Super-Robot-Taisen-S\\.gitignore",
+                      "destination":  "E:\\4robot\\.gitignore"
+                  },
+                  {
+                      "source":  "E:\\4robot\\Dai-4-Ji-Super-Robot-Taisen-S\\README.md",
+                      "destination":  "E:\\4robot\\README.md"
+                  },
+                  {
+                      "source":  "E:\\4robot\\extension_analysis",
+                      "destination":  "E:\\4robot\\01_work\\extension_analysis"
+                  },
+                  {
+                      "source":  "E:\\4robot\\vram_test",
+                      "destination":  "E:\\4robot\\01_work\\vram_test"
+                  },
+                  {
+                      "source":  "E:\\4robot\\srw4s-kr-patch",
+                      "destination":  "E:\\4robot\\01_work\\reference\\srw4s-kr-patch"
+                  },
+                  {
+                      "source":  "E:\\4robot\\sfc",
+                      "destination":  "E:\\4robot\\00_original\\sfc"
+                  },
+                  {
+                      "source":  "E:\\4robot\\Dai-4-Ji Super Robot Taisen S (Japan) (Rev 1) (Track 1)-patched.bin",
+                      "destination":  "E:\\4robot\\00_original\\ps1\\Dai-4-Ji Super Robot Taisen S (Japan) (Rev 1) (Track 1)-patched.bin"
+                  },
+                  {
+                      "source":  "E:\\4robot\\Dai-4-Ji Super Robot Taisen S (Japan) (Rev 1) (Track 1).bin",
+                      "destination":  "E:\\4robot\\00_original\\ps1\\Dai-4-Ji Super Robot Taisen S (Japan) (Rev 1) (Track 1).bin"
+                  },
+                  {
+                      "source":  "E:\\4robot\\Dai-4-Ji Super Robot Taisen S (Japan) (Rev 1) (Track 2).bin",
+                      "destination":  "E:\\4robot\\00_original\\ps1\\Dai-4-Ji Super Robot Taisen S (Japan) (Rev 1) (Track 2).bin"
+                  },
+                  {
+                      "source":  "E:\\4robot\\Dai-4-Ji Super Robot Taisen S (Japan) (Rev 1) (Track 3).bin",
+                      "destination":  "E:\\4robot\\00_original\\ps1\\Dai-4-Ji Super Robot Taisen S (Japan) (Rev 1) (Track 3).bin"
+                  },
+                  {
+                      "source":  "E:\\4robot\\03_output",
+                      "destination":  "E:\\4robot\\01_work\\experiments"
+                  }
+              ],
+    "input_sha256":  {
+                         "Dai-4-Ji Super Robot Taisen S (Japan) (Rev 1) (Track 1)-patched.bin":  "B2304C134000EA10CA2F26ACA5A20F5D6E853F053FE91F3FA78E683A5F71934C",
+                         "Dai-4-Ji Super Robot Taisen S (Japan) (Rev 1) (Track 1).bin":  "963108980BC28D346ABF33662FF3B24643896A5F4EF8776D31286E2D353E8C81",
+                         "Dai-4-Ji Super Robot Taisen S (Japan) (Rev 1) (Track 2).bin":  "CCB19757EC6AAAE78041F8C6EC4840E1468616FA8A5A45E21EC4423612CFBDE3",
+                         "Dai-4-Ji Super Robot Taisen S (Japan) (Rev 1) (Track 3).bin":  "0C53D570C8EDAA7222D7A95BEB7F4806E84AE946461E8F0D5D90831F3D431D10"
+                     },
+    "input_hashes_preserved":  true
+}

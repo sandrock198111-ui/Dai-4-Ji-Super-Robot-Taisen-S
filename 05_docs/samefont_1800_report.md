@@ -44,7 +44,7 @@
 전체 검사는 다음과 같다.
 
 ```
-python 02_scripts/probe_samefont_stream.py --evidence E:/4robot/vram_test --font 06_tools/galmuri/Galmuri11.ttf --output 03_output/samefont_1800 --core <local-mednafen-core> --count 1800
+python 02_scripts/probe_samefont_stream.py --evidence E:/4robot/01_work/vram_test --font 06_tools/galmuri/Galmuri11.ttf --output 03_output/samefont_1800 --core <local-mednafen-core> --count 1800
 ```
 
 다음 단계는 게임의 실제 문구/페이지 처리 시점에 공급을 연결하는 내부 로더 조사이다. 제어 코드 확장, 글자 ID와 슬롯의 분리, 공통 UI와 전투 오버레이의 생존 기간을 먼저 확정해야 한다. 축약 없는 장문 삽입은 그와 별도 과제로 유지한다.

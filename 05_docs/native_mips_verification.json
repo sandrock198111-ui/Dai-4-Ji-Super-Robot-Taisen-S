@@ -1,0 +1,9 @@
+{
+  "legacy_cases": 3552,
+  "legacy_pixel_and_layout_mismatches": 0,
+  "virtual_cases": 18,
+  "virtual_mismatches": 0,
+  "cache_misses": 7,
+  "cache_hits": 11,
+  "scope": "MIPS function execution in Unicorn, not full-game proof"
+}

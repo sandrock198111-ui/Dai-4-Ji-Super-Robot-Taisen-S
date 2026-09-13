@@ -1,0 +1,18 @@
+{
+  "/SLPS_001.96;1": {
+    "interior_pointer_candidates": [],
+    "escape_marker_occurrences": 0
+  },
+  "/DAT/STAYDAT.BIN;1": {
+    "interior_pointer_candidates": [],
+    "escape_marker_occurrences": 0
+  },
+  "/DAT/C_DEMOG.BIN;1": {
+    "interior_pointer_candidates": [],
+    "escape_marker_occurrences": 0
+  },
+  "/DAT/M_BANKS.BIN;1": {
+    "interior_pointer_candidates": [],
+    "escape_marker_occurrences": 0
+  }
+}

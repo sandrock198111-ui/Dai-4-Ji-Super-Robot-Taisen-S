@@ -1,0 +1,60 @@
+{
+  "regression": {
+    "hold_base": {
+      "vram_words": 0,
+      "pixels": 0,
+      "bbox": null
+    },
+    "redraw_base": {
+      "vram_words": 0,
+      "pixels": 0,
+      "bbox": null
+    },
+    "restore_base2": {
+      "vram_words": 0,
+      "pixels": 0,
+      "bbox": null
+    },
+    "map_hold_base": {
+      "vram_words": 0,
+      "pixels": 0,
+      "bbox": null
+    },
+    "map_transition_base": {
+      "vram_words": 0,
+      "pixels": 0,
+      "bbox": null
+    }
+  },
+  "native": {
+    "native_miss": {
+      "counters": {
+        "owner": 1,
+        "misses": 2,
+        "hits": 0
+      },
+      "original_font_unchanged": true,
+      "pixel_check_passed": true
+    },
+    "native_hit": {
+      "counters": {
+        "owner": 0,
+        "misses": 1,
+        "hits": 1
+      },
+      "original_font_unchanged": true,
+      "pixel_check_passed": true
+    },
+    "native_other": {
+      "counters": {
+        "owner": 5,
+        "misses": 2,
+        "hits": 0
+      },
+      "original_font_unchanged": true,
+      "pixel_check_passed": true
+    }
+  },
+  "modified_map_sha256": "6a8123ee31b2e1251c18c48b49a07bfa5f643e12674ea73e045f293d0b284ef1",
+  "scope": "Runtime code installation tests; cold boot is a separate check"
+}

@@ -1,13 +1,11 @@
-2026-09-13
-Baseline: Japan Rev 1 original and Einbroch v0.99W patched image; neither image modified.
-No new distributable patch. Dynamic glyph caching and long-text expansion are not implemented.
-Selected UI/map/first-battle RAM font replacement tests preserve existing rendered text and affect newly rendered text only. Full-game VRAM safety remains unproven.
-See vram_probe.md and vram_results.json.
-
-2026-09-13 update: actual precomposed regular/bold A/B/A process-RAM tests passed in sampled UI/map/battle paths. Restore-and-redraw matches baseline VRAM exactly.
-The static Bold-font diagnostic BIN/CUE is WITHDRAWN from user testing: it changed appearance beyond the user's request. Its evidence remains historical, not a recommended build or release.
-Cold boot reaches character settings; loaded 48KiB font matches B exactly. See font_switch_test_20260913.md.
-User clarification: preserve existing 1bpp precomposed typeface; use SFC as a translation reference. No new acceptable user-facing test image has been completed yet.
-
-2026-09-13 same-typeface update: 1800 previously absent bitmap syllables passed 600 screen checks across 300 independent restored-state UI samples using 6 slots. Original RAM font restored; sampled whole-VRAM restoration comparisons identical.
-Local external-provider test launcher: 03_output/samefont_test/Run_12_samples.cmd. This is not a patch BIN or in-game cache. Continuous menu reentry remains unverified. See samefont_1800_report.md.
+2026-09-13 current verified state
+Repository root: E:/4robot; Arc-style 00_original through 99_backup layout.
+Inputs preserved in 00_original/ps1 and 00_original/sfc. Four PS1 track hashes match before/after relocation.
+Preserve existing 1bpp precomposed Regular typeface. SFC is translation reference only. Bold diagnostic withdrawn; historical evidence retained in 01_work/experiments.
+Current test: 03_output/v001_native_loader/SRW4S_v001_native_loader_test.cue (BIN and v0.99W-based xdelta alongside).
+MAP-only internal loader: six resident glyphs, one 32-byte RAM cache, existing renderer output path. No extra VRAM cache area. Original font banks unchanged.
+3552 legacy MIPS cases and 18 virtual cases pass. Five sampled emulator regression paths have identical VRAM. Distinct/repeated requests exercise cache misses/hits.
+Published CUE cold boots 3600 frames without RAM edits or state restoration. Two diagnostic glyphs match pixels; owner=1/misses=2/hits=0. Original 48KiB font unchanged.
+Bulk font supply, battle integration, continuous scene-lifetime coverage and long-text insertion remain unimplemented/unqualified. Full-game safety unproven. Local BIOS differs from recommended SHA1.
+Earlier 1800-glyph external tests are independent-state evidence, not coverage of the six-glyph internal implementation.
+See native_loader_report.md and native_published_path_verification.json.

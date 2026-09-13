@@ -86,4 +86,4 @@
 - 환경 한계: mednafen 소프트웨어 PS1 코어로 실행했으나 보유 BIOS 해시가 코어 권장값과 달랐다. 지원 BIOS 및 독립 에뮬레이터 재시험이 필요하다. 실기 하드웨어 검증은 아니다.
 - 표본 한계: 일부 UI·맵·첫 전투이다. 가라오케·모든 컷인·모든 메뉴까지 안전하다고 확장 해석하지 않는다.
 
-근거: `vram_results.json`, `vram_probe.md`, 로컬 `E:/4robot/vram_test`의 상태·화면·실행 설정. Arc 근거는 `E:/korean/05_docs/codex_notes.txt`의 2126~2154, 2207~2255 부근 기록이다. Arc 기록은 과거 캐시 실험 계보에 관한 것이며 현재 Arc 패치 전체의 상태 판정이 아니다.
+근거: `vram_results.json`, `vram_probe.md`, 로컬 `E:/4robot/01_work/vram_test`의 상태·화면·실행 설정. Arc 근거는 `E:/korean/05_docs/codex_notes.txt`의 2126~2154, 2207~2255 부근 기록이다. Arc 기록은 과거 캐시 실험 계보에 관한 것이며 현재 Arc 패치 전체의 상태 판정이 아니다.

@@ -1,0 +1,20 @@
+{
+  "frames": 3600,
+  "no_external_ram_edits": true,
+  "no_savestate_restore": true,
+  "counters": {
+    "owner": 1,
+    "misses": 2,
+    "hits": 0
+  },
+  "original_font_unchanged": true,
+  "pixel_checks": [
+    {
+      "frame": 3600,
+      "text": "넋뛴",
+      "mismatches": 0,
+      "outside_mismatches": 0
+    }
+  ],
+  "disc_sha256": "505e64ea1429a5994be57a5a57d8c8bcaa93acc53d95892600a152cff3401f23"
+}

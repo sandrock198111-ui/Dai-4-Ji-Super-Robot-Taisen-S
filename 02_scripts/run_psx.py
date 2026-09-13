@@ -69,7 +69,7 @@ assert core.retro_load_game(C.byref(g)),'load failed'
 core.retro_set_controller_port_device.argtypes=[C.c_uint,C.c_uint];core.retro_set_controller_port_device(0,1)
 core.retro_serialize_size.restype=C.c_size_t;core.retro_serialize.argtypes=[C.c_void_p,C.c_size_t];core.retro_serialize.restype=C.c_bool;core.retro_unserialize.argtypes=[C.c_void_p,C.c_size_t];core.retro_unserialize.restype=C.c_bool
 core.retro_get_memory_data.argtypes=[C.c_uint];core.retro_get_memory_data.restype=C.c_void_p;core.retro_get_memory_size.argtypes=[C.c_uint];core.retro_get_memory_size.restype=C.c_size_t
-config=json.loads(Path(sys.argv[2]).read_text());out=ROOT/config['output'];out.mkdir(exist_ok=True)
+config=json.loads(Path(sys.argv[2]).read_text(encoding='utf-8'));out=ROOT/config['output'];out.mkdir(exist_ok=True)
 def dump(label):
  size=core.retro_serialize_size();buf=C.create_string_buffer(size);assert core.retro_serialize(buf,size);(out/f'{label}.state').write_bytes(buf.raw)
  for id,name in [(2,'ram'),(3,'vram')]:

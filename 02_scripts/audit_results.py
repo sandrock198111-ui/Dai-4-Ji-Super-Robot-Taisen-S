@@ -45,7 +45,7 @@ report=dict(method='Same serialized full-emulator state and frame/input schedule
  bios_caveat='Existing firmware SHA1 213da1cb149b564c0ccb0b12e62d04df367ac851 differs from core expected b05def971d8ec59f346f2d9ac21fb742e3eb6917. Independent supported-BIOS rerun remains required.',
  mutation=dict(address='0x80057838',bytes=49152,kind='diagnostic zero bitmap; process RAM only'),
  cases=cases,full_game_vram_safety_proven=False,cache_implemented=False,
- disc_hashes={p.name:sha(p) for p in ROOT.parent.glob('*Track 1*.bin')})
+ disc_hashes={p.name:sha(p) for p in (Path(__file__).resolve().parents[1]/'00_original/ps1').glob('*Track 1*.bin')})
 (ROOT/'results.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
 sheet=Image.new('RGB',(640,3*270),(28,28,28));draw=ImageDraw.Draw(sheet)
 for row,(a,b,title) in enumerate([

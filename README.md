@@ -1,9 +1,23 @@
 # Dai-4-Ji Super Robot Taisen S Korean patch research
 
-Continuation research based on Japan Rev 1 and Einbroch v0.99W. Translation quality must not be sacrificed to text or glyph capacity. Precomposed 1bpp fonts and long-text support are the priorities.
+Japan Rev 1 / Einbroch v0.99W continuation. Preserve the existing 1bpp precomposed Regular typeface; do not shorten translations to fit glyph capacity. SFC is a translation reference.
 
-Read AGENTS.md and the four starting documents in 05_docs before working. Dynamic caching is not implemented. Current evidence covers diagnostic RAM font replacement in selected UI, map and battle scenes.
+Repository root: `E:/4robot`.
 
-Directories inherited from Arc 1: 00_original (immutable inputs), 01_work, 02_scripts, 03_output, 04_screenshots, 05_docs, 06_tools and 99_backup. Ignored directories must be recreated on a fresh checkout. Original images, BIOS, extracted assets and emulator states are never committed.
+| Directory | Purpose |
+|---|---|
+| 00_original | Immutable PS1 inputs and SFC references |
+| 01_work | Upstream checkout, analysis and experiment intermediates |
+| 02_scripts | Build and verification scripts |
+| 03_output | Executable test builds |
+| 04_screenshots | Screen evidence |
+| 05_docs | Reports and project records |
+| 06_tools | Local tools and fonts |
+| 99_backup | Backups |
 
-See 05_docs/vram_probe.md and 05_docs/local_inventory.md for results and local dependencies.
+Current local test: `03_output/v001_native_loader/SRW4S_v001_native_loader_test.cue`.
+BIN, xdelta and Korean instructions are alongside. This implements six resident glyphs and a single RAM cache entry in the MAP renderer. Bulk font supply, battle integration and long-text expansion remain outstanding.
+
+[Native loader report](05_docs/native_loader_report.md) / [Local inventory](05_docs/local_inventory.md).
+
+Read AGENTS.md and the designated starting documents before working. Folder README files are tracked; disc images, BIOS, extracted data and output BIN files remain local.

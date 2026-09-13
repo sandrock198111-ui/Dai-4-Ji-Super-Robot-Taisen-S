@@ -1,0 +1,18 @@
+{
+  "start": 2148601908,
+  "end": 2148602520,
+  "code_end": 2148602208,
+  "owner": 2148602208,
+  "misses": 2148602212,
+  "hits": 2148602216,
+  "cache": 2148602220,
+  "library": 2148602252,
+  "instructions": 75,
+  "characters": "넋뛴샘샴띠갂",
+  "escape": "F0 00 47 4C index_lo index_hi",
+  "external_entry_references": [],
+  "external_pointer_candidates": [],
+  "original_map_sha256": "af95b61f86198bfbb220e41ebbcbab78528b6c181f7761ee1b35dc9cae3b3c8a",
+  "modified_map_sha256": "6a8123ee31b2e1251c18c48b49a07bfa5f643e12674ea73e045f293d0b284ef1",
+  "scope": "MAP-only renderer prototype, six resident source glyphs, one-entry 32-byte cache"
+}
