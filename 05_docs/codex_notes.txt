@@ -9,3 +9,7 @@ Upstream omits the translation ledger, preventing full baseline rebuild from the
 2026-09-13: Galmuri11 v2.24.29 at 12px raster settings uniquely matches 1245 baseline fullwidth slots. Remaining 291 slots preserved; historical 1247-glyph allocation is not fully recovered.
 Same-character regular/bold bitmap swapping confirms sampled new-text consumers read RAM font; restoring A and redrawing UI converges to baseline VRAM. Font identity mapping is distinct from implementing new glyph IDs or automatic cache policy.
 SFC supplied IPS reconstructs supplied Korean ROM exactly: original 3145728 bytes, Korean 4194304, 43078 changed bytes in original extent. Korean settings and syllable-selection input observed; font/script formats remain unverified.
+
+The character-settings modal's six glyph origins are (56+12*n,96), n=0..5; matching text color is RGB(240,232,216). Observed advance is 12px on this screen, distinct from 16x16 source storage. Do not generalize stride to every consumer.
+Galmuri11 Regular can supply 1800 bitmaps absent from the baseline fullwidth bank to these six slots across independent samples, with exact screen matches and unchanged surrounding pixels. No permanent slot expansion or virtual Unicode encoding was implemented.
+No/Cancel/Confirm/Start are not interchangeable ways to recreate the initial character-settings modal. Do not claim continuous reuse from independent savestate samples.

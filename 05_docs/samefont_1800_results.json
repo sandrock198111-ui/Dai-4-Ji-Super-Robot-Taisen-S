@@ -1,0 +1,35 @@
+{
+  "scope": "independent restored-state UI samples; external RAM provider, no in-game loader or continuous menu-transition claim",
+  "distinct_new_syllables": 1800,
+  "simultaneous_reused_slots": 6,
+  "slot_ids": [
+    "0x66e",
+    "0x45a",
+    "0x4cb",
+    "0x674",
+    "0x5df",
+    "0x39a"
+  ],
+  "typeface": "Galmuri11 regular v2.24.29 at baseline raster settings",
+  "font_sha256": "54f54ab2874f0d05e85097ecd9b219710b1728b7296539bcd371cca8018872d5",
+  "checks": 600,
+  "pixel_mismatches": 0,
+  "outside_text_pixel_mismatches": 0,
+  "complete_original_font_restored": true,
+  "frames": 30000,
+  "bios_caveat": "Same prior core/unsupported-firmware hash; supported BIOS rerun pending",
+  "sampled_restore_vram": [
+    {
+      "page": 0,
+      "whole_vram_equal_after_font_restore": true
+    },
+    {
+      "page": 1,
+      "whole_vram_equal_after_font_restore": true
+    },
+    {
+      "page": 299,
+      "whole_vram_equal_after_font_restore": true
+    }
+  ]
+}

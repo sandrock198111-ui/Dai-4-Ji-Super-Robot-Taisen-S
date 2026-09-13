@@ -86,14 +86,44 @@ def edits(ops):
 if config.get('load_state'):
  state=Path(config['load_state']).read_bytes();buf=C.create_string_buffer(state);assert core.retro_unserialize(buf,len(state))
 edits(config.get('initial_edits',[]))
+checks={p['frame']:p for p in config.get('pixel_checks',[])};check_results=[]
+font_check=None
+if checks:
+ from PIL import ImageDraw,ImageFont
+ font_check=ImageFont.truetype(config['reference_font'],12)
+def check_pixels(spec):
+ # Independent screen oracle: render the requested Unicode directly with PIL,
+ # without decoding the target bytes or consulting the runtime slot mapping.
+ assert last is not None
+ mismatches=0
+ for n,ch in enumerate(spec['text']):
+  ref=Image.new('1',(16,16));draw=ImageDraw.Draw(ref);draw.fontmode='1';draw.text((0,0),ch,font=font_check,fill=1)
+  for y in range(16):
+   for x in range(12):
+    actual=last.getpixel((spec['x']+n*12+x,spec['y']+y))==tuple(spec['color'])
+    mismatches+=actual!=bool(ref.getpixel((x,y)))
+ outside=0
+ if spec.get('reference_screen'):
+  baseline=Image.open(spec['reference_screen']).convert('RGB');assert baseline.size==last.size
+  x0,y0=spec['x'],spec['y'];x1=x0+len(spec['text'])*12;y1=y0+16
+  for yy in range(last.height):
+   for xx in range(last.width):
+    if not(x0<=xx<x1 and y0<=yy<y1):outside+=baseline.getpixel((xx,yy))!=last.getpixel((xx,yy))
+ result=dict(frame=frame+1,text=spec['text'],mismatches=mismatches,outside_mismatches=outside)
+ check_results.append(result)
+ if mismatches:last.save(out/f'failed_{frame+1:06}.png')
+ assert mismatches==0 and outside==0,result
 start=time.time()
 for frame in range(config['frames']):
+ if frame in config.get('reset_state_frames',[]):
+  state=Path(config['load_state']).read_bytes();buf=C.create_string_buffer(state);assert core.retro_unserialize(buf,len(state))
  buttons=set()
  for lo,hi,keys in config.get('inputs',[]):
   if lo<=frame<hi:buttons.update(keys)
  core.retro_run()
  for action in config.get('edits',[]):
   if action['frame']==frame+1:edits(action['writes'])
+ if frame+1 in checks:check_pixels(checks[frame+1])
  if frame+1 in config.get('dumps',[]):dump(f'f{frame+1:06}')
  if (frame+1) in config.get('captures',[]) and last is not None:last.save(out/f'frame_{frame+1:06}.png')
  if (frame+1)%600==0:print('frames',frame+1,'seconds',round(time.time()-start,1),flush=True)
@@ -102,4 +132,4 @@ size=core.retro_serialize_size();buf=C.create_string_buffer(size);assert core.re
 for id,name in [(2,'ram.bin'),(0,'save_ram.bin'),(3,'vram.bin')]:
  p=core.retro_get_memory_data(id);size=core.retro_get_memory_size(id)
  if p and size:(out/name).write_bytes(C.string_at(p,size))
-(out/'run.json').write_text(json.dumps({'frames':config['frames'],'seconds':time.time()-start,'options':{k.decode():v.decode() for k,v in settings.items()}},indent=2));core.retro_unload_game();core.retro_deinit();print('complete',str(out),flush=True)
+(out/'run.json').write_text(json.dumps({'frames':config['frames'],'seconds':time.time()-start,'pixel_checks':check_results,'options':{k.decode():v.decode() for k,v in settings.items()}},indent=2));core.retro_unload_game();core.retro_deinit();print('complete',str(out),flush=True)

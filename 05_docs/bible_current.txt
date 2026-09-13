@@ -8,3 +8,6 @@ See vram_probe.md and vram_results.json.
 The static Bold-font diagnostic BIN/CUE is WITHDRAWN from user testing: it changed appearance beyond the user's request. Its evidence remains historical, not a recommended build or release.
 Cold boot reaches character settings; loaded 48KiB font matches B exactly. See font_switch_test_20260913.md.
 User clarification: preserve existing 1bpp precomposed typeface; use SFC as a translation reference. No new acceptable user-facing test image has been completed yet.
+
+2026-09-13 same-typeface update: 1800 previously absent bitmap syllables passed 600 screen checks across 300 independent restored-state UI samples using 6 slots. Original RAM font restored; sampled whole-VRAM restoration comparisons identical.
+Local external-provider test launcher: 03_output/samefont_test/Run_12_samples.cmd. This is not a patch BIN or in-game cache. Continuous menu reentry remains unverified. See samefont_1800_report.md.

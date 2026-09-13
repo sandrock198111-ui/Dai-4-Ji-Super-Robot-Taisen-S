@@ -14,3 +14,7 @@ Cold boot static B image: 3600 frames, character settings screenshot inspected; 
 Disc checks: both font copies exact; all 50 changed sectors declared; unchanged source sector ECC roundtrip; allowed payload bounds and final ECC checked. Xdelta decode SHA256 equals generated image.
 SFC: IPS 1862 records reconstruct supplied 4MiB ROM exactly; Snes9x cold boot 3600 frames reaches Korean name input. Raw 1bpp sample did not identify font format; no reuse inferred. Initial survey stdout encoding failed under cp949 after JSON was written; changed stdout to ASCII JSON.
 Compilation and PS1 runtime suite passed after runner ROM-data loading change. Inputs remain unchanged. No full-game validation claimed.
+
+2026-09-13 samefont test: initial continuous menu loops failed at page 2 (frame 240); selecting No advanced game and cancel/confirm/Start did not regenerate the same modal. First page glyph check passed. Continuous-loop approach not qualified.
+Final method: 300 independent restored-state samples, 1800 distinct glyph bitmaps absent from baseline font, 6 slots, 30000 frames. 600 exact requested-glyph screen checks passed; 0 outside-text pixel differences. Complete font restored. Whole VRAM identical across restore at samples 0/1/299. This is an external provider test, not an in-game loader.
+After removing mapping-file dependency, 12-glyph quick suite passed. Evidence and scope in samefont_1800_report.md and samefont_1800_results.json.
