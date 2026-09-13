@@ -193,3 +193,5 @@ Do not shorten translations or paraphrase to accommodate glyph limits. Prefer pr
 Verify RAM storage, VRAM behavior and long-text expansion independently. Distinguish static evidence, sampled runtime tests and full-game verification.
 Working repository: https://github.com/sandrock198111-ui/Dai-4-Ji-Super-Robot-Taisen-S
 Reference upstream: https://github.com/Einbroch/srw4s-kr-patch
+
+User clarification 2026-09-13: SFC Korean patch is a TRANSLATION reference, not a request to replace the PS1 font. Preserve the existing 1bpp precomposed font appearance. Do not substitute Bold or another typeface for a user-facing test build. Test glyph supply/capacity independently of typeface choice. The Bold diagnostic build was a scope mistake and is withdrawn from use.

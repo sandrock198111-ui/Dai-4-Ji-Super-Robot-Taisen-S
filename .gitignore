@@ -25,6 +25,8 @@ translation/
 *.7z
 *.lzb
 *.LZB
+*.sfc
+*.smc
 __pycache__/
 *.py[cod]
 .venv/

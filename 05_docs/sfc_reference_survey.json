@@ -1,0 +1,54 @@
+{
+  "files": {
+    "4th Super Robot Wars_Kor_v1.06.ips": {
+      "bytes": 753684,
+      "sha256": "e6f1e6538fab1fce697fe9a9f90c2d9911851bee11892cfb58bb4962a01a90f8"
+    },
+    "4th_Super_Robot_Wars_Kor.sfc": {
+      "bytes": 4194304,
+      "sha256": "9d864f20f5015a18b287340c7fca6c630e55cb474857432bf64ea2f5ec0f7272"
+    },
+    "Dai-4-ji Super Robot Taisen (Japan) (Rev 1).sfc": {
+      "bytes": 3145728,
+      "sha256": "efd72094b2727c4903924cf9296b3946b95a354f639b600e1d76d9ec6b9ca18b"
+    }
+  },
+  "ips_records": 1862,
+  "ips_matches_supplied_korean": true,
+  "original_bytes": 3145728,
+  "korean_bytes": 4194304,
+  "changed_original_bytes": 43078,
+  "added_bytes": 1048576,
+  "headers": {
+    "4th_Super_Robot_Wars_Kor.sfc": [
+      {
+        "offset": "0x7fc0",
+        "title": "\u0001�\u0003�\u0003�\u0006�\u000f�5�����\u0000\u0000\u0000\u0000\u0000",
+        "map_mode": "0x0",
+        "rom_size_field": 1
+      },
+      {
+        "offset": "0xffc0",
+        "title": "SUPER ROBOT WARS4    ",
+        "map_mode": "0x31",
+        "rom_size_field": 12
+      }
+    ],
+    "Dai-4-ji Super Robot Taisen (Japan) (Rev 1).sfc": [
+      {
+        "offset": "0x7fc0",
+        "title": "\u0001�\u0003�\u0003�\u0006�\u000f�5�����\u0000\u0000\u0000\u0000\u0000",
+        "map_mode": "0x0",
+        "rom_size_field": 1
+      },
+      {
+        "offset": "0xffc0",
+        "title": "SUPER ROBOT WARS4    ",
+        "map_mode": "0x31",
+        "rom_size_field": 12
+      }
+    ]
+  },
+  "script_format_verified": false,
+  "font_format_verified": false
+}

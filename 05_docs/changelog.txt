@@ -3,3 +3,8 @@ Initialized the user-designated empty repository. Inherited Arc 1 directory, doc
 Imported analysis scripts and recorded prior runtime test results. Parameterized runner/audit local paths through environment variables.
 Re-ran imported audit successfully; Python compilation passed. Original and patched images unchanged.
 2026-09-13: Added arc_comparison_report.md comparing historical Arc VRAM cache failures with the scoped SRW RAM font probe; no new runtime test or image mutation.
+
+2026-09-13: Added SFC IPS identity survey; supplied patched ROM exactly reconstructs from supplied original and IPS. Viewed Korean character settings/name input in isolated Snes9x.
+Built static PS1 B-font test image, CUE and xdelta in ignored output directory. Identified 1245 glyphs by exact bitmap matching, replaced both disk font copies, validated changed sectors and xdelta roundtrip.
+Added actual A/B/A runtime probe and result report. Extended libretro runner to respect core need_fullpath for the SFC reference; PS1 A/B/A suite rerun passed after change.
+User correction: withdrew Bold test build from use. Preserve existing precomposed appearance; SFC is a translation reference. Retain executed diagnostics as historical evidence only.

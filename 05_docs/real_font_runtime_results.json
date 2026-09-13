@@ -1,0 +1,86 @@
+{
+  "real_hold_B": {
+    "vram_words": 0,
+    "pixels": 0,
+    "bbox": null
+  },
+  "real_redraw_B": {
+    "vram_words": 1190,
+    "pixels": 455,
+    "bbox": [
+      56,
+      99,
+      183,
+      158
+    ]
+  },
+  "real_restore_ABA": {
+    "vram_words": 0,
+    "pixels": 0,
+    "bbox": null
+  },
+  "real_map_B": {
+    "vram_words": 3347,
+    "pixels": 1288,
+    "bbox": [
+      8,
+      27,
+      245,
+      70
+    ]
+  },
+  "real_battle_B": {
+    "1": {
+      "vram_words": 0,
+      "pixels": 0,
+      "bbox": null
+    },
+    "30": {
+      "vram_words": 0,
+      "pixels": 0,
+      "bbox": null
+    },
+    "60": {
+      "vram_words": 0,
+      "pixels": 0,
+      "bbox": null
+    },
+    "120": {
+      "vram_words": 423,
+      "pixels": 162,
+      "bbox": [
+        48,
+        179,
+        115,
+        190
+      ]
+    },
+    "300": {
+      "vram_words": 313,
+      "pixels": 118,
+      "bbox": [
+        49,
+        179,
+        103,
+        190
+      ]
+    },
+    "600": {
+      "vram_words": 313,
+      "pixels": 118,
+      "bbox": [
+        49,
+        179,
+        103,
+        190
+      ]
+    },
+    "900": {
+      "vram_words": 0,
+      "pixels": 0,
+      "bbox": null
+    }
+  },
+  "scope": "External emulator RAM A/B/A bitmap replacement, not an in-game loader/cache hook",
+  "bios_caveat": "Inherited diagnostic core BIOS mismatch; independent supported-firmware rerun remains"
+}

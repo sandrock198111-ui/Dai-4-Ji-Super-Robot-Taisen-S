@@ -6,6 +6,7 @@ CORE=Path(os.environ['SRW_CORE'])
 core=C.CDLL(str(CORE))
 class Variable(C.Structure):_fields_=[('key',C.c_char_p),('value',C.c_char_p)]
 class Game(C.Structure):_fields_=[('path',C.c_char_p),('data',C.c_void_p),('size',C.c_size_t),('meta',C.c_char_p)]
+class SystemInfo(C.Structure):_fields_=[('name',C.c_char_p),('version',C.c_char_p),('extensions',C.c_char_p),('need_fullpath',C.c_bool),('block_extract',C.c_bool)]
 ENV=C.CFUNCTYPE(C.c_bool,C.c_uint,C.c_void_p);VIDEO=C.CFUNCTYPE(None,C.c_void_p,C.c_uint,C.c_uint,C.c_size_t);AUDIO=C.CFUNCTYPE(None,C.c_int16,C.c_int16);BATCH=C.CFUNCTYPE(C.c_size_t,C.c_void_p,C.c_size_t);POLL=C.CFUNCTYPE(None);INPUT=C.CFUNCTYPE(C.c_int16,C.c_uint,C.c_uint,C.c_uint,C.c_uint)
 settings={};retained=[];fmt=1;last=None;frame=0;buttons=set();system=str(ROOT/'system').encode();savedir=str(ROOT/'saves').encode();Path(savedir.decode()).mkdir(exist_ok=True)
 @ENV
@@ -60,7 +61,10 @@ for name,cb in [('environment',environment),('video_refresh',video),('audio_samp
  f=getattr(core,'retro_set_'+name);f.argtypes=[type(cb)];f(cb)
 core.retro_init()
 core.retro_load_game.argtypes=[C.POINTER(Game)];core.retro_load_game.restype=C.c_bool
-cue=Path(sys.argv[1]).resolve();path=str(cue).encode();g=Game(path,None,0,None)
+cue=Path(sys.argv[1]).resolve();path=str(cue).encode()
+info=SystemInfo();core.retro_get_system_info.argtypes=[C.POINTER(SystemInfo)];core.retro_get_system_info(C.byref(info))
+rom_data=None if info.need_fullpath else C.create_string_buffer(cue.read_bytes())
+g=Game(path,None if rom_data is None else C.cast(rom_data,C.c_void_p),0 if rom_data is None else len(rom_data)-1,None)
 assert core.retro_load_game(C.byref(g)),'load failed'
 core.retro_set_controller_port_device.argtypes=[C.c_uint,C.c_uint];core.retro_set_controller_port_device(0,1)
 core.retro_serialize_size.restype=C.c_size_t;core.retro_serialize.argtypes=[C.c_void_p,C.c_size_t];core.retro_serialize.restype=C.c_bool;core.retro_unserialize.argtypes=[C.c_void_p,C.c_size_t];core.retro_unserialize.restype=C.c_bool

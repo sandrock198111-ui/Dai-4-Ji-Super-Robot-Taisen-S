@@ -5,3 +5,7 @@ Current patched executable and BATTLE.LZB match the original. Historical experim
 Historical 9670-byte battle overlay extension was abandoned after graphics corruption. Do not assume that region is free.
 Selected UI/map/first-battle runs preserve existing rendered pixels when RAM glyphs are zeroed. New dialogue changes. This does not prove safe allocation for a new RAM cache.
 Upstream omits the translation ledger, preventing full baseline rebuild from the public repository alone.
+
+2026-09-13: Galmuri11 v2.24.29 at 12px raster settings uniquely matches 1245 baseline fullwidth slots. Remaining 291 slots preserved; historical 1247-glyph allocation is not fully recovered.
+Same-character regular/bold bitmap swapping confirms sampled new-text consumers read RAM font; restoring A and redrawing UI converges to baseline VRAM. Font identity mapping is distinct from implementing new glyph IDs or automatic cache policy.
+SFC supplied IPS reconstructs supplied Korean ROM exactly: original 3145728 bytes, Korean 4194304, 43078 changed bytes in original extent. Korean settings and syllable-selection input observed; font/script formats remain unverified.
