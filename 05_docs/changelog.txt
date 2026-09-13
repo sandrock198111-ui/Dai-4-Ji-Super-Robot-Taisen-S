@@ -2,3 +2,4 @@
 Initialized the user-designated empty repository. Inherited Arc 1 directory, documentation and Git rules; added SRW-specific requirements.
 Imported analysis scripts and recorded prior runtime test results. Parameterized runner/audit local paths through environment variables.
 Re-ran imported audit successfully; Python compilation passed. Original and patched images unchanged.
+2026-09-13: Added arc_comparison_report.md comparing historical Arc VRAM cache failures with the scoped SRW RAM font probe; no new runtime test or image mutation.

@@ -7,3 +7,4 @@ Audit assertions passed, including after script import. Source hashes recorded i
 Setup failures: input bitmask support fixed; very short input holds missed; initial restore attempt did not trigger redraw and was repeated with redraw.
 Limit: existing BIOS differs from core's expected SHA1; supported BIOS and independent emulator rerun required. No dynamic cache implemented.
 Repository checks: Python compilation, audit rerun, ignored-output checks, staged diff review.
+2026-09-13 report review: cross-checked comparison against Arc codex_notes and SRW vram_results.json; existing evidence only, no new emulator run.
