@@ -1,0 +1,7 @@
+Verified facts / 2026-09-13
+16x16 1bpp glyph storage costs 32 bytes per glyph. Fullwidth RAM font begins at 0x80057838 and spans 49152 bytes (1536 slots).
+STAYDAT and C_DEMOG contain font copies; copies do not double the repertoire.
+Current patched executable and BATTLE.LZB match the original. Historical experiments in documentation are not necessarily active patches.
+Historical 9670-byte battle overlay extension was abandoned after graphics corruption. Do not assume that region is free.
+Selected UI/map/first-battle runs preserve existing rendered pixels when RAM glyphs are zeroed. New dialogue changes. This does not prove safe allocation for a new RAM cache.
+Upstream omits the translation ledger, preventing full baseline rebuild from the public repository alone.

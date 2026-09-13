@@ -1,0 +1,9 @@
+2026-09-13 / Modified target: isolated emulator process RAM only.
+Paired runs restore identical state and input schedule; zero 49152 font bytes at 0x80057838.
+UI hold 120 frames: zero VRAM difference. Redraw: 526 differing pixels. Restore and redraw: zero VRAM difference.
+Map hold 240 frames: zero VRAM difference. New map text: 1417 differing pixels, confined to dialogue.
+Battle frames 1/30/60: zero VRAM difference. Frames 120/300/600: 173/149/149 differing pixels in new dialogue.
+Audit assertions passed, including after script import. Source hashes recorded in vram_results.json.
+Setup failures: input bitmask support fixed; very short input holds missed; initial restore attempt did not trigger redraw and was repeated with redraw.
+Limit: existing BIOS differs from core's expected SHA1; supported BIOS and independent emulator rerun required. No dynamic cache implemented.
+Repository checks: Python compilation, audit rerun, ignored-output checks, staged diff review.

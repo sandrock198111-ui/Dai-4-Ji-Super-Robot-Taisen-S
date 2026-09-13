@@ -1,0 +1,5 @@
+2026-09-13
+Baseline: Japan Rev 1 original and Einbroch v0.99W patched image; neither image modified.
+No new distributable patch. Dynamic glyph caching and long-text expansion are not implemented.
+Selected UI/map/first-battle RAM font replacement tests preserve existing rendered text and affect newly rendered text only. Full-game VRAM safety remains unproven.
+See vram_probe.md and vram_results.json.

@@ -1,0 +1,189 @@
+{
+  "method": "Same serialized full-emulator state and frame/input schedule; only 48KiB RAM font differs.",
+  "emulator": "Existing mednafen_psx_libretro.dll, software GPU, native resolution, interpreter",
+  "core_sha256": "ab9d91e2a59167fddd0702570e5f1f43ff4c93679698f94179acc743a6ba3910",
+  "bios_sha256": "2c9e45aa698e12f11eeb2e19c7f1567a2d83720cc19200c5b74f9e6303946bb4",
+  "bios_caveat": "Existing firmware SHA1 213da1cb149b564c0ccb0b12e62d04df367ac851 differs from core expected b05def971d8ec59f346f2d9ac21fb742e3eb6917. Independent supported-BIOS rerun remains required.",
+  "mutation": {
+    "address": "0x80057838",
+    "bytes": 49152,
+    "kind": "diagnostic zero bitmap; process RAM only"
+  },
+  "cases": [
+    {
+      "baseline": "hold_base",
+      "modified": "hold_blank",
+      "sample": "state",
+      "vram_different_words": 0,
+      "screen_diff_bbox": null,
+      "screen_different_pixels": 0,
+      "changed_64word_256line_tiles": {}
+    },
+    {
+      "baseline": "redraw_base",
+      "modified": "redraw_blank",
+      "sample": "state",
+      "vram_different_words": 1375,
+      "screen_diff_bbox": [
+        56,
+        99,
+        183,
+        158
+      ],
+      "screen_different_pixels": 526,
+      "changed_64word_256line_tiles": {
+        "0,0": 27,
+        "0,1": 27,
+        "1,0": 277,
+        "1,1": 277,
+        "2,0": 222,
+        "2,1": 222,
+        "10,0": 323
+      }
+    },
+    {
+      "baseline": "restore_base2",
+      "modified": "restore_blank2",
+      "sample": "state",
+      "vram_different_words": 0,
+      "screen_diff_bbox": null,
+      "screen_different_pixels": 0,
+      "changed_64word_256line_tiles": {}
+    },
+    {
+      "baseline": "map_hold_base",
+      "modified": "map_hold_blank",
+      "sample": "state",
+      "vram_different_words": 0,
+      "screen_diff_bbox": null,
+      "screen_different_pixels": 0,
+      "changed_64word_256line_tiles": {}
+    },
+    {
+      "baseline": "map_transition_base",
+      "modified": "map_transition_blank",
+      "sample": "state",
+      "vram_different_words": 3708,
+      "screen_diff_bbox": [
+        8,
+        27,
+        246,
+        70
+      ],
+      "screen_different_pixels": 1417,
+      "changed_64word_256line_tiles": {
+        "0,0": 383,
+        "0,1": 383,
+        "1,0": 506,
+        "1,1": 506,
+        "2,0": 414,
+        "2,1": 414,
+        "3,0": 114,
+        "3,1": 114,
+        "10,0": 874
+      }
+    },
+    {
+      "baseline": "battle_base",
+      "modified": "battle_blank",
+      "sample": "f000001",
+      "vram_different_words": 0,
+      "screen_diff_bbox": null,
+      "screen_different_pixels": 0,
+      "changed_64word_256line_tiles": {}
+    },
+    {
+      "baseline": "battle_base",
+      "modified": "battle_blank",
+      "sample": "f000030",
+      "vram_different_words": 0,
+      "screen_diff_bbox": null,
+      "screen_different_pixels": 0,
+      "changed_64word_256line_tiles": {}
+    },
+    {
+      "baseline": "battle_base",
+      "modified": "battle_blank",
+      "sample": "f000060",
+      "vram_different_words": 0,
+      "screen_diff_bbox": null,
+      "screen_different_pixels": 0,
+      "changed_64word_256line_tiles": {}
+    },
+    {
+      "baseline": "battle_base",
+      "modified": "battle_blank",
+      "sample": "f000120",
+      "vram_different_words": 450,
+      "screen_diff_bbox": [
+        48,
+        179,
+        115,
+        190
+      ],
+      "screen_different_pixels": 173,
+      "changed_64word_256line_tiles": {
+        "0,0": 59,
+        "0,1": 59,
+        "1,0": 114,
+        "1,1": 114,
+        "7,1": 104
+      }
+    },
+    {
+      "baseline": "battle_base",
+      "modified": "battle_blank",
+      "sample": "f000300",
+      "vram_different_words": 395,
+      "screen_diff_bbox": [
+        48,
+        179,
+        103,
+        190
+      ],
+      "screen_different_pixels": 149,
+      "changed_64word_256line_tiles": {
+        "0,0": 58,
+        "0,1": 58,
+        "1,0": 91,
+        "1,1": 91,
+        "7,1": 97
+      }
+    },
+    {
+      "baseline": "battle_base",
+      "modified": "battle_blank",
+      "sample": "f000600",
+      "vram_different_words": 395,
+      "screen_diff_bbox": [
+        48,
+        179,
+        103,
+        190
+      ],
+      "screen_different_pixels": 149,
+      "changed_64word_256line_tiles": {
+        "0,0": 58,
+        "0,1": 58,
+        "1,0": 91,
+        "1,1": 91,
+        "7,1": 97
+      }
+    },
+    {
+      "baseline": "battle_base",
+      "modified": "battle_blank",
+      "sample": "f000900",
+      "vram_different_words": 0,
+      "screen_diff_bbox": null,
+      "screen_different_pixels": 0,
+      "changed_64word_256line_tiles": {}
+    }
+  ],
+  "full_game_vram_safety_proven": false,
+  "cache_implemented": false,
+  "disc_hashes": {
+    "Dai-4-Ji Super Robot Taisen S (Japan) (Rev 1) (Track 1)-patched.bin": "b2304c134000ea10ca2f26aca5a20f5d6e853f053fe91f3fa78e683a5f71934c",
+    "Dai-4-Ji Super Robot Taisen S (Japan) (Rev 1) (Track 1).bin": "963108980bc28d346abf33662ff3b24643896a5f4ef8776d31286e2d353e8c81"
+  }
+}
