@@ -2,7 +2,7 @@
 
 - Repository: `E:/4robot`.
 - Immutable PS1 inputs: `00_original/ps1`; SFC translation references: `00_original/sfc`.
-- Current test: `03_output/v001_native_loader/SRW4S_v001_native_loader_test.cue`. BIN stays alongside; audio tracks resolve relatively into `00_original/ps1`.
+- Current test: `03_output/v001_native_loader/SRW4S_v001_native_loader_test.cue`. BIN stays alongside; audio track copies are included alongside as `SRW4S_Track02.bin` and `SRW4S_Track03.bin`.
 - Intermediates and evidence: `01_work/experiments/native_loader`. Earlier experiments are adjacent; Bold diagnostic withdrawn.
 - Original runtime configurations/states/BIOS: `01_work/vram_test`; static analysis: `01_work/extension_analysis`.
 - Complete upstream checkout: `01_work/reference/srw4s-kr-patch`, Einbroch at 978ea84. Translation ledger absent upstream; full translation rebuild requires it.

@@ -9,3 +9,5 @@ Published CUE cold boots 3600 frames without RAM edits or state restoration. Two
 Bulk font supply, battle integration, continuous scene-lifetime coverage and long-text insertion remain unimplemented/unqualified. Full-game safety unproven. Local BIOS differs from recommended SHA1.
 Earlier 1800-glyph external tests are independent-state evidence, not coverage of the six-glyph internal implementation.
 See native_loader_report.md and native_published_path_verification.json.
+
+2026-09-13 CUE portability fix: user emulator failed opening Track 2 with errno 22. Previous parent-directory audio references replaced by same-folder SRW4S_Track02.bin / SRW4S_Track03.bin copies with verified source hashes. Game BIN unchanged. Publisher skips identical existing files after WinError 32 on emulator-open BIN. Corrected CUE cold boot passed 3600 frames and exact glyph checks on libretro; user emulator retest pending.
