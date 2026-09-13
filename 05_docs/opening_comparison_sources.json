@@ -1,0 +1,30 @@
+{
+  "source_images": {
+    "ja": {
+      "path": "E:\\4robot\\00_original\\ps1\\Dai-4-Ji Super Robot Taisen S (Japan) (Rev 1) (Track 1).bin",
+      "sha256": "963108980bc28d346abf33662ff3b24643896a5f4ef8776d31286e2d353e8c81"
+    },
+    "ko": {
+      "path": "E:\\4robot\\00_original\\ps1\\Dai-4-Ji Super Robot Taisen S (Japan) (Rev 1) (Track 1)-patched.bin",
+      "sha256": "b2304c134000ea10ca2f26aca5a20f5d6e853f053fe91f3fa78e683a5f71934c"
+    }
+  },
+  "paired_token_terminated_slots": 14105,
+  "unique_original_offsets": 11907,
+  "scope": "Candidate slots, including duplicates and unused records; not dialogue count. Hangul mapping partial. Dynamic names unresolved.",
+  "sfc_inputs": {
+    "4th Super Robot Wars_Kor_v1.06.ips": {
+      "bytes": 753684,
+      "sha256": "e6f1e6538fab1fce697fe9a9f90c2d9911851bee11892cfb58bb4962a01a90f8"
+    },
+    "4th_Super_Robot_Wars_Kor.sfc": {
+      "bytes": 4194304,
+      "sha256": "9d864f20f5015a18b287340c7fca6c630e55cb474857432bf64ea2f5ec0f7272"
+    },
+    "Dai-4-ji Super Robot Taisen (Japan) (Rev 1).sfc": {
+      "bytes": 3145728,
+      "sha256": "efd72094b2727c4903924cf9296b3946b95a354f639b600e1d76d9ec6b9ca18b"
+    }
+  },
+  "reviewed_ps1_slots": "H02:E0186-E0226 (41 slots, including personality variants)"
+}

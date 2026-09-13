@@ -8,7 +8,7 @@ class Variable(C.Structure):_fields_=[('key',C.c_char_p),('value',C.c_char_p)]
 class Game(C.Structure):_fields_=[('path',C.c_char_p),('data',C.c_void_p),('size',C.c_size_t),('meta',C.c_char_p)]
 class SystemInfo(C.Structure):_fields_=[('name',C.c_char_p),('version',C.c_char_p),('extensions',C.c_char_p),('need_fullpath',C.c_bool),('block_extract',C.c_bool)]
 ENV=C.CFUNCTYPE(C.c_bool,C.c_uint,C.c_void_p);VIDEO=C.CFUNCTYPE(None,C.c_void_p,C.c_uint,C.c_uint,C.c_size_t);AUDIO=C.CFUNCTYPE(None,C.c_int16,C.c_int16);BATCH=C.CFUNCTYPE(C.c_size_t,C.c_void_p,C.c_size_t);POLL=C.CFUNCTYPE(None);INPUT=C.CFUNCTYPE(C.c_int16,C.c_uint,C.c_uint,C.c_uint,C.c_uint)
-settings={};retained=[];fmt=1;last=None;frame=0;buttons=set();system=str(ROOT/'system').encode();savedir=str(ROOT/'saves').encode();Path(savedir.decode()).mkdir(exist_ok=True)
+settings={};retained=[];fmt=1;last=None;frame=0;render_frames=None;buttons=set();system=str(ROOT/'system').encode();savedir=str(ROOT/'saves').encode();Path(savedir.decode()).mkdir(exist_ok=True)
 @ENV
 def environment(cmd,data):
  global fmt
@@ -34,6 +34,7 @@ def environment(cmd,data):
 @VIDEO
 def video(data,w,h,pitch):
  global last
+ if render_frames is not None and frame+1 not in render_frames:return
  if not data or data==C.c_void_p(-1).value:return
  raw=C.string_at(data,pitch*h)
  if fmt==1:im=Image.frombytes('RGB',(w,h),raw,'raw','BGRX',pitch)
@@ -70,6 +71,8 @@ core.retro_set_controller_port_device.argtypes=[C.c_uint,C.c_uint];core.retro_se
 core.retro_serialize_size.restype=C.c_size_t;core.retro_serialize.argtypes=[C.c_void_p,C.c_size_t];core.retro_serialize.restype=C.c_bool;core.retro_unserialize.argtypes=[C.c_void_p,C.c_size_t];core.retro_unserialize.restype=C.c_bool
 core.retro_get_memory_data.argtypes=[C.c_uint];core.retro_get_memory_data.restype=C.c_void_p;core.retro_get_memory_size.argtypes=[C.c_uint];core.retro_get_memory_size.restype=C.c_size_t
 config=json.loads(Path(sys.argv[2]).read_text(encoding='utf-8'));out=ROOT/config['output'];out.mkdir(exist_ok=True)
+if config.get('capture_only'):
+ render_frames=set(config.get('captures',[]))|set(config.get('dumps',[]))|{config['frames']}|{p['frame'] for p in config.get('pixel_checks',[])}
 def dump(label):
  size=core.retro_serialize_size();buf=C.create_string_buffer(size);assert core.retro_serialize(buf,size);(out/f'{label}.state').write_bytes(buf.raw)
  for id,name in [(2,'ram'),(3,'vram')]:
